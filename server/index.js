@@ -9,7 +9,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://the-resistance.vercel.app",
     methods: ["GET", "POST"]
   }
 })
@@ -33,7 +33,9 @@ for (let i = 1; i <= 5; i++) {
   missionTrack.push(missionInfo[i].strength);
 }
 
-
+app.get("/", (req, res) => {
+  res.send("Server is up and running");
+})
 
 io.use((socket, next) => {
   const username = socket.handshake.auth.username;

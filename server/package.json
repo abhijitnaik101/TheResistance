@@ -8,5 +8,11 @@
     "build": "babel src -d lib",
     "test": "jest",
     "start": "node"
-  }
+  },
+  "version": "1.0.0",
+  "description": "web game of the resistance",
+  "main": "index.js",
+  "repository": "https://github.com/abhijitnaik101/TheResistance/",
+  "author": "Abhijit Naik",
+  "license": "MIT"
 }
