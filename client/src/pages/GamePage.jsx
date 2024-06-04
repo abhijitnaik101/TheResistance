@@ -9,7 +9,7 @@ import { atom_leaderID, atom_missionInfo, atom_user, atom_users } from "../App";
 import { useLocation } from "react-router-dom";
 
 
-const socket = io('localhost:5000', { autoConnect: false });
+const socket = io('https://theresistanceserver-1.onrender.com', { autoConnect: false });
 
 
 
@@ -29,7 +29,7 @@ const GamePage = () => {
     const location = useLocation();
     const username = location.state.name;
     const roomid = location.state.room;
-    if(!username && !roomid){username = "user1"; roomid = "room1"}
+    //if(!username && !roomid){username = "user1"; roomid = "room1"}
     //console.log(`GamePage : name : ${username}, room : ${roomid}`);
 
 
